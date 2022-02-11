@@ -1,0 +1,91 @@
+Calculator: 
+
+<Calculator>:
+    BoxLayout:
+        orientation: 'vertical'
+        size: root.size
+        Label:
+            text: "servant information"
+            font_size: 68
+        GridLayout:
+            cols: 2
+            rows: 2
+
+            spacing: 2
+            padding: 4
+            size_hint_y:2
+            
+            TextInput:
+                id: atk
+                font_size: 68
+                multiline: False
+                text: "0"
+            TextInput:
+                id: treasure_magnification
+                font_size: 68
+                multiline: False
+                text: "0"
+
+            TextInput:
+                id: special_attack
+                font_size: 68
+                multiline: False
+                text: "1"
+            TextInput:
+                id: class_correction
+                font_size: 68
+                multiline: False
+                text: "1"
+            Label:
+        # ラベル
+        Label:
+            font_size: 68
+            text: "buff"  
+        GridLayout:
+            cols: 2
+            rows: 4
+
+            spacing: 2
+            padding: 3
+            size_hint_y:3
+
+            TextInput:
+                id: class_compatibility
+                font_size: 68
+                multiline: False
+                text: "1"
+            TextInput:
+                id: servant_compatibility
+                font_size: 68
+                multiline: False
+                text: "1"
+
+            TextInput:
+                id: attack_buff
+                font_size: 68
+                multiline: False
+                text: "0"
+            TextInput:
+                id: card_buff
+                font_size: 68
+                multiline: False
+                text: "0"
+
+            TextInput:
+                id: treasure_buff
+                font_size: 68
+                multiline: False
+                text: "0"
+            TextInput:
+                id: special_defense
+                font_size: 68
+                multiline: False
+                text: "0"
+        Button:
+            id: button_calculate
+            text: "calculate"
+            font_size: 68
+            on_press: root.calculate() 
+        Label:
+            font_size: 68
+            text: root.text   
